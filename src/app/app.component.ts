@@ -14,8 +14,8 @@ export class AppComponent {
     private fb: FormBuilder
   ){
     this.form = fb.group({
-      yesNoAnswer: ['no']
-    })
+      yesNoAnswer: [null]
+    });
   }
 
   submit(){
