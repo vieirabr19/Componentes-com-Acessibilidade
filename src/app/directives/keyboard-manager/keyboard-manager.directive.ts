@@ -35,7 +35,7 @@ export class KeyboardManagerDirective {
     const items = this.items.toArray();
     const currentSeletedIndex = items.findIndex(item => item.isFocused());
     const targetElementFocus = items[currentSeletedIndex + diretion];
-
+    console.log(targetElementFocus)
     if(targetElementFocus){
       return targetElementFocus;
     }

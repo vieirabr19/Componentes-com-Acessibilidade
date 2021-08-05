@@ -14,11 +14,15 @@ export class AppComponent {
     private fb: FormBuilder
   ){
     this.form = fb.group({
-      yesNoAnswer: [null]
+      yesNoAnswer: [{
+        value: 'no',
+        disabled: false
+      }]
     });
   }
 
   submit(){
+    this.form.get('yesNoAnswer').disable();
     console.log(this.form.value);
   }
 
